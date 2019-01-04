@@ -16,6 +16,6 @@ The system processes raw data from multiple sources to generate the directory. I
 
 Query and Results: Once the directory is created, queries can be made. For example, a search query could be to find the number of ‘John’ in the directory ordered by State. The result of such a query can be TN – 4, CT – 6, NY – 9 etc.
 
-Multiple Concurrent Queries and Load Balancer: In this part, we’ll scale the design to accommodate multiple concurrent queries. Because multiple queries can potentially cause a high increase in wait time, load balancers are used. Load balancers ensure low latency of the system by adding a new web server in case of accumulation of too many queries.
+Multiple Concurrent Queries and Load Balancer: To accommodate multiple concurrent queries. Because multiple queries can potentially cause a high increase in wait time, load balancers are used. Load balancers ensure low latency of the system by adding a new web server in case of accumulation of too many queries.
 
 Event-driven Algorithm: Now, one would potentially need to check the availability of the web server to service the next query. A more efficient way would be for each web server to ‘communicate’ when it becomes available. Hence, we’ll use an event driven algorithm where the processing time of the query that is allotted to the server is used as the delay as to when the server would be available.
